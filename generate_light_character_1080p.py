@@ -65,6 +65,6 @@ def create_character_image(character, output_path, width=1920, height=1080, font
 
 if __name__ == "__main__":
     # 指定输出路径和文件名
-    # output_path = "light_1080p.png"
-    output_path = "../holography_test/xin_1080p.png"
-    create_character_image("馨", output_path)
+    output_path = "light_1080p.png"
+    # output_path = "../holography_test/xin_1080p.png"
+    create_character_image("光", output_path)

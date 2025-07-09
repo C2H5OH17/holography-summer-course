@@ -8,7 +8,6 @@ import os
 plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
 
-
 def gerchberg_saxton_fourier(target_amplitude, wavelength, focal_length, pixel_size, iterations=50):
     """
     基于GS迭代算法生成傅里叶变换全息图
@@ -103,7 +102,7 @@ def main():
 
     # 读取目标文件
     try:
-        img = Image.open("../holography_test/xin_1080p.png").convert('L')
+        img = Image.open("light_1080p.png").convert('L')
         target_array = np.array(img, dtype=np.float32)
 
         # 校验尺寸
@@ -140,7 +139,7 @@ def main():
     visualize_results(target_amplitude, hologram_phase, reconstruction)
 
     # 保存频谱相位全息图
-    output_path = './results/spectrum_phase_hologram_1080p(黑底白字).png'  # 输出路径
+    output_path = './results/spectrum_phase_hologram_1080p.png'  # 输出路径
     save_spectrum_phase_hologram(hologram_phase, output_path)
 
 if __name__ == "__main__":
